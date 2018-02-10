@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import Text from './components/Text.js';
 import logo from './logo.svg';
 import './App.css';
+import {generateParagraph} from './data/wordgenerator';
 import Floskel from './components/Floskel.js';
 import Button from './components/Button.js';
-import Input from './components/Input.js';
 import LikeThis from './components/LikeThis.js';
 import Opinion from './components/Opinion.js';
 
@@ -19,7 +19,7 @@ class App extends Component {
         <div>
           <Text key={i} type="hellos">
             {this.props.logo > 1 && <img src={logo} className="App-logo" alt="logo" />}
-            Hello
+            {generateParagraph()}
           </Text>
         </div>
       );
