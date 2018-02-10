@@ -1,0 +1,33 @@
+
+.Page {
+    justify-content: center;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "nav nav nav nav"
+      "main main . sidebar"
+      "footer footer footer footer";
+}
+
+.Page header {
+    grid-area: header;
+}
+
+.Page nav {
+    grid-area: nav;
+}
+
+.Page main {
+    grid-area: main;
+}
+
+.Page aside {
+    grid-area: sidebar;
+}
+
+.Page footer {
+    grid-area: footer;
+}

@@ -5,6 +5,7 @@ import { createStore } from 'redux';
 import daemon from './reducers/daemon.js';
 import './index.css';
 import App from './App';
+import Page from './containers/Page.js';
 import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(
@@ -13,7 +14,7 @@ let store = createStore(
 );
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Page />
   </Provider>,
   document.getElementById('root')
 );
