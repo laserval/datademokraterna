@@ -11,39 +11,48 @@ import Opinion from './components/Opinion.js';
 
 class App extends Component {
 
-  renderHellos() {
-    const { hellos } = this.props;
+  renderPartyProgram() {
+    const { partyProgram } = this.props;
 
-    return [...Array(hellos)].map((e, i) => {
+    return [...Array(partyProgram)].map((e, i) => {
       return (
-        <div>
-          <Text key={i} type="hellos">
-            {this.props.logo > 1 && <img src={logo} className="App-logo" alt="logo" />}
-            {generateParagraph()}
+          <Text key={i} type="partyProgram">
+            { generateParagraph() }
           </Text>
-        </div>
       );
+    });
+  }
+
+  renderFloskler() {
+    const { floskel } = this.props;
+
+    return [...Array(floskel)].map((e,i) => {
+      return (<Floskel key={i}/>);
     });
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <Floskel />
-          <LikeThis type="logo">
-            <img src={logo} className="App-logo" alt="logo" />
-          </LikeThis>
-          <Button>
-            Clicky {this.props.button}
-          </Button>
-        </header>
-
-        <section>
-          <Opinion />
-        </section>
-
-        {this.renderHellos()}
+      <div className="grid">
+          <header className="grid-header">
+            { this.renderFloskler() }
+          </header>
+          <nav className="grid-nav">
+          </nav>
+          <aside className="grid-sidebar">
+            <LikeThis type="floskel">
+              <Floskel/>
+            </LikeThis>
+          </aside>
+          <main className="grid-main">
+            <article>
+              <h1>Vårt partiprogram</h1>
+              { this.renderPartyProgram() }
+            </article>
+            <article>
+              <Opinion/>
+            </article>
+          </main>
       </div>
     );
   }
@@ -57,7 +66,8 @@ const mapStateToProps = state => {
     text: state.text,
     headings: state.headings,
     button: state.button,
-    logo: state.logo
+    floskel: state.floskel,
+    partyProgram: state.partyProgram
   };
 };
 

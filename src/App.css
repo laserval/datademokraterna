@@ -35,3 +35,66 @@
     filter: blur(10px);
   }
 }
+
+
+
+.grid {
+  justify-content: center;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "sidebar main main ."
+    "footer footer footer footer";
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-nav {
+  grid-area: nav;
+}
+
+.grid-main {
+  grid-area: main;
+}
+
+.grid-sidebar {
+  grid-area: sidebar;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+
+.grid header {
+  color: white;
+  background-color: #123456;
+}
+
+.grid nav {
+  background-color: #999;
+}
+
+.grid main {
+  display: flex;
+
+  background-color: #aaa;
+}
+
+.grid main article {
+  flex: 1;
+}
+
+.Page aside {
+  background-color: #aaa;
+}
+
+.grid footer {
+  background-color: #aaa;
+}

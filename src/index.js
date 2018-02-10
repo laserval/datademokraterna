@@ -5,8 +5,6 @@ import { createStore } from 'redux';
 import daemon from './reducers/daemon.js';
 import './index.css';
 import App from './App';
-import Page from './containers/Page.js';
-import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(
   daemon,
@@ -18,4 +16,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-registerServiceWorker();

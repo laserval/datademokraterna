@@ -4,6 +4,10 @@ import Waypoint from 'react-waypoint';
 
 class TextToLookAt extends Component {
 
+    componentWillUnmount() {
+        clearInterval(this.id);
+    }
+
     startViewing = () => {
         clearInterval(this.id);
         this.id = setInterval(() => this.props.onDrive(this.props.type), 1000);    

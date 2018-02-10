@@ -4,7 +4,8 @@ const initialState = {
     headings: 1,
     text: 1,
     button: 1,
-    logo: 1
+    floskel: 1,
+    partyProgram: 1
 }
 
 function modify(key, mod, state) {
