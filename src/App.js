@@ -24,6 +24,18 @@ class App extends Component {
     });
   }
 
+  renderSearched() {
+    const { search } = this.props;
+    if (search.length === 0) return;
+    return search.map((e,i) => {
+      return (
+        <article key={i}>
+          <p>{ generateParagraph(e) }</p>
+        </article>
+      )
+    });
+  }
+
   renderFloskler() {
     const { floskel } = this.props;
 
@@ -45,15 +57,14 @@ class App extends Component {
             <LikeThis type="floskel">
               <Floskel/>
             </LikeThis>
+            <Opinion/>
           </aside>
           <main className="grid-main">
             <article>
               <h1>Vårt partiprogram</h1>
               { this.renderPartyProgram() }
             </article>
-            <article>
-              <Opinion/>
-            </article>
+            { this.renderSearched() }
           </main>
       </div>
     );
@@ -69,7 +80,8 @@ const mapStateToProps = state => {
     headings: state.headings,
     button: state.button,
     floskel: state.floskel,
-    partyProgram: state.partyProgram
+    partyProgram: state.partyProgram,
+    search: state.search
   };
 };
 
