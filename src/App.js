@@ -5,7 +5,6 @@ import logo from './logo.svg';
 import './App.css';
 import {generateParagraph} from './data/wordgenerator';
 import Floskel from './components/Floskel.js';
-import Button from './components/Button.js';
 import LikeThis from './components/LikeThis.js';
 import Opinion from './components/Opinion.js';
 
@@ -35,7 +34,7 @@ class App extends Component {
     return (
       <div className="grid">
           <header className="grid-header">
-            { this.renderFloskler() }
+            <h1 className="page-header">data<span className="text-color-alt">democraterna</span></h1>
           </header>
           <nav className="grid-nav">
           </nav>

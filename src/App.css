@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+:root {
+  --color-dark: rgb(44, 73, 68);
+  --color-light: rgb(255, 216, 163);
+  --color-accent: rgb(210, 30, 115);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* normal */
+  line-height: 1.5em;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700; /* bold */
+}
+
+.page-header {
+  font-size: 60px;
+}
+
+.text-color-alt {
+  color: var(--color-accent);
+}
+
 .App {
   text-align: center;
 }
@@ -8,10 +36,9 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: var(--color-dark);
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
 .App-title {
@@ -44,7 +71,7 @@
   grid-column-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     "nav nav nav nav"
     "sidebar main main ."
@@ -53,6 +80,7 @@
 
 .grid-header {
   grid-area: header;
+  padding: 40px;
 }
 
 .grid-nav {
@@ -74,27 +102,21 @@
 
 .grid header {
   color: white;
-  background-color: #123456;
+  background-color: var(--color-dark);
 }
 
 .grid nav {
-  background-color: #999;
+  background-color: var(--color-accent);
 }
 
 .grid main {
   display: flex;
-
-  background-color: #aaa;
 }
 
 .grid main article {
   flex: 1;
 }
 
-.Page aside {
-  background-color: #aaa;
-}
-
 .grid footer {
-  background-color: #aaa;
+  background-color: var(--color-dark);
 }
