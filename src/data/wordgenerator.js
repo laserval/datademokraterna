@@ -25,11 +25,25 @@ const rows = [
     ["Med hänvisning till", "en inkluderande", "organisation", "tillvaratas", "relationerna", "kring", "konsekvensaspekten"],
 ]
 
+function generateHeadline(keyword) {
+    let headline = "";
+    for(let i = 0; i < 3; i++) {
+        let word = '';
+        if (keyword && i === 2) {
+            word = keyword;
+        } else {
+            word = rows[Math.floor(Math.random() * rows.length)][i];
+        }
+        headline += ' ' + word;
+    }
+    return headline;
+}
+
 function generateSentence(keyword) {
     let sentence = "";
     for(let i = 0; i < rows[0].length; i++) {
         let word = '';
-        if (keyword && Math.random() > .9) {
+        if (keyword && (i === 2 || i === 4 || i === 6) && Math.random() > .9) {
             word = keyword;
         } else {
             word = rows[Math.floor(Math.random() * rows.length)][i];
@@ -50,6 +64,7 @@ function generateParagraph(keyword) {
 }
 
 export {
+    generateHeadline,
     generateSentence,
     generateParagraph,
 };

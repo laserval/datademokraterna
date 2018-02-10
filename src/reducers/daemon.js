@@ -1,3 +1,4 @@
+import { generateParagraph, generateHeadline } from "../data/wordgenerator";
 
 const initialState = {
     hellos: 1,
@@ -5,7 +6,7 @@ const initialState = {
     text: 1,
     button: 1,
     floskel: 1,
-    partyProgram: 1,
+    partyProgram: [generateParagraph()],
     search: []
 }
 
@@ -18,9 +19,19 @@ function modify(key, mod, state) {
 const daemon = (state = initialState, action) => {
     switch (action.type) {
       case 'SEARCH':
-        return {...state, search: [...state.search, ...action.data] };
+        const articles = action.data.map((e) => {
+          return {
+            headline: generateHeadline(e),
+            paragraph: generateParagraph(e)
+          };
+        });
+        return {...state, search: [...state.search, ...articles],  };
       case 'DRIVE':
-        return modify(action.data.key, (a) => a+1, state);
+        if (action.data.key === 'partyProgram') {
+          return {...state, partyProgram: [...state.partyProgram, generateParagraph()] };
+        } else {
+          return modify(action.data.key, (a) => a+1, state);
+        }
       case 'LESS':
         return modify(action.data.key, (a) => a-1, state);
       default:

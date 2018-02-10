@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+div {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --color-dark: rgb(44, 73, 68);
   --color-light: rgb(255, 216, 163);
@@ -26,51 +31,26 @@ h1, h2, h3, h4 {
   color: var(--color-accent);
 }
 
-.App {
-  text-align: center;
+.header-logo {
+  max-width: 300px;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 0px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header-search {
+
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-
-.App-header {
-  background-color: var(--color-dark);
-  height: 150px;
-  padding: 20px;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes App-blur {
-  from {
-    filter: blur(0);
-  }
-  to {
-    filter: blur(10px);
-  }
-}
-
-
 
 .grid {
   justify-content: center;
   display: grid;
   grid-column-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: 100px, repeat(auto-fill, minmax(200px, 1fr) );
   grid-template-areas:
     "header header header header"
     "nav nav nav nav"
@@ -80,11 +60,11 @@ h1, h2, h3, h4 {
 
 .grid-header {
   grid-area: header;
-  padding: 40px;
 }
 
 .grid-nav {
   grid-area: nav;
+  min-height: 20px;
 }
 
 .grid-main {

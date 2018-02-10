@@ -11,17 +11,6 @@ function generateModel(weights) {
 
 
     return {
-        header: {
-            
-        },
-        main: {
-            articles: {}
-        },
-        sidebar: {
-            
-        },
-        footer: {
-
-        }
+        partyProgram
     };
 }

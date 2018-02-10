@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './Search.css';
 
 class Search extends Component {
 
@@ -30,18 +31,18 @@ class Search extends Component {
     render() {
         if (this.state.active) {
             return ( 
-                <div>
+                <div className={`Search-wrapper ${this.props.className}`}>
                     <form onSubmit={this.handleSubmit}>
-                        <input type="search" placeholder="Sök och finn" 
+                        <input className="Search-input" type="search" placeholder="Sök och finn" 
                         value={this.state.value} onChange={this.handleChange}/>
-                        <input type="submit" value="Sök"/>
+                        <input className="Search-submit" type="submit" value="Sök"/>
                     </form>
                 </div>
             );
         } else {
             return (
-                <div>
-                    <button onClick={this.onClick}/>
+                <div className={`Search-wrapper ${this.props.className}`}>
+                    <button onClick={this.onClick}>Sök</button>
                 </div>
             )
         }
