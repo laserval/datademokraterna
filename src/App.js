@@ -3,15 +3,16 @@ import { connect } from 'react-redux';
 import Text from './components/Text.js';
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button.js';
 
 class App extends Component {
 
   renderHellos() {
-    const { text } = this.props;
+    const { hellos } = this.props;
 
-    return [...Array(text)].map((e, i) => {
+    return [...Array(hellos)].map((e, i) => {
       return (
-          <Text key={i}>
+          <Text key={i} type="hellos">
             Hello
           </Text>
         );
@@ -23,9 +24,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title" onClick={() => this.props.onDrivenClick('headings')}>
-            Welcome to { this.props.headings }
-          </h1>
+          <Button>
+            Clicky { this.props.button }
+          </Button>
         </header>
         { this.renderHellos() }
       </div>
@@ -37,8 +38,10 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
+    hellos: state.hellos,
     text: state.text,
-    headings: state.headings
+    headings: state.headings,
+    button: state.button
   };
 };
 
