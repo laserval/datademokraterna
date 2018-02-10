@@ -28,7 +28,8 @@ export default ({ gal, right }) => {
 
   return (
     <div>
-      <p>Du verkar hålla med Datademokraterna!</p>
+      <p className="EndscreenSummary">Du verkar hålla med Datademokraterna!</p>
+      <p>Så här hamnar du på den politiska skalan</p>
       {/* <p>
         Gal: {gal}, right: {right}
       </p> */}
@@ -36,6 +37,7 @@ export default ({ gal, right }) => {
       <Chart parties={parties} gal={gal} right={right} />
 
       <div className="ResultList">
+        <p>Så passar partierna dina åsikter</p>
         {parties.map(party => {
           return <ResultBar party={party} key={party.short} />;
         })}

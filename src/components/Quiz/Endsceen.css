@@ -1,7 +1,11 @@
+.EndscreenSummary {
+  font-size: larger;
+}
+
 .ResultList {
   width: 400px;
   max-width: 95vw;
-  margin: auto;
+  margin: 30px auto 0;
 }
 
 .ResultBar {

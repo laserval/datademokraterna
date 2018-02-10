@@ -2,7 +2,7 @@
   "questions": [
     {
       "text": "Vad tycker du om höjda skatter?",
-      "image": "https://placeimg.com/640/300/people",
+      "image": "https://placeimg.com/640/300/people?0",
       "alternatives": [
         {
           "text": "Toppenbra!",
@@ -20,7 +20,7 @@
           "text": "Vene",
           "right": 0,
           "gal": 0,
-          "response": "Håller med, den här frågan var rätt onödig."
+          "response": "Håller med, vem bryr sig om skatt."
         },
         {
           "text": "Alltså, helst inte",
@@ -32,41 +32,41 @@
           "text": "Nej, fy fan!",
           "right": 1,
           "gal": -1,
-          "response": "Precis! Skatt är mord!"
+          "response": "Precis! Skatt är stöld!"
         }
       ]
     },
     {
       "text": "Vad tycker du om miljön?",
-      "image": "https://placeimg.com/640/300/people",
+      "image": "https://placeimg.com/640/300/nature?1",
       "alternatives": [
         {
-          "text": "Toppenbra!",
-          "right": -1,
+          "text": "Älskar den!",
+          "right": -0.5,
           "gal": 1,
           "response": "Eller hur! Miljön är superviktig!"
         },
         {
-          "text": "Det är väl ok",
+          "text": "Jodå",
           "right": -0.5,
           "gal": 0.5,
           "response": "Mmm, miljö kan vara bra att ha ibland."
         },
         {
-          "text": "Vene",
+          "text": "¯\\_(ツ)_/¯",
           "right": 0,
           "gal": 0,
-          "response": "Håller med, miljöfrågor är rätt ointressant."
+          "response": "Håller med, miljöfrågor är rätt ointressanta."
         },
         {
-          "text": "Alltså, helst inte",
+          "text": "Sådär",
           "right": 0.5,
           "gal": -0.5,
-          "response": "Nä, man måste ju få flyga till Thailand ibland."
+          "response": "Ja, man måste ju få flyga till Thailand ibland."
         },
         {
-          "text": "Nej, fy fan!",
-          "right": 1,
+          "text": "Skit i den!!",
+          "right": 0.5,
           "gal": -1,
           "response": "Precis! Miljö är helt onödigt!"
         }
@@ -74,36 +74,36 @@
     },
     {
       "text": "Vad tycker du om privatisering?",
-      "image": "https://placeimg.com/640/300/people",
+      "image": "https://placeimg.com/640/300/arch?2",
       "alternatives": [
         {
-          "text": "Toppenbra!",
-          "right": -1,
-          "gal": 1,
+          "text": "Privatisera mera!",
+          "right": 1,
+          "gal": -1,
           "response": "Eller hur! Det är kul att få äga grejer!"
         },
         {
-          "text": "Det är väl ok",
-          "right": -0.5,
-          "gal": 0.5,
+          "text": "Joråsatt",
+          "right": 0.5,
+          "gal": -0.5,
           "response": "Mmm, det kan vara bra att ha ibland."
         },
         {
-          "text": "Vene",
+          "text": "Meh",
           "right": 0,
           "gal": 0,
           "response": "Håller med, den här frågan var rätt onödig."
         },
         {
-          "text": "Alltså, helst inte",
-          "right": 0.5,
-          "gal": -0.5,
-          "response": "Nä, statligt är ju bättre."
+          "text": "Det känns rätt dumt",
+          "right": -0.5,
+          "gal": 0.5,
+          "response": "Mmm, statligt är ju bättre."
         },
         {
-          "text": "Nej, fy fan!",
-          "right": 1,
-          "gal": -1,
+          "text": "Nää, usch!",
+          "right": -1,
+          "gal": 1,
           "response": "Precis! Vinst är mord!"
         }
       ]

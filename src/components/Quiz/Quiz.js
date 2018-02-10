@@ -48,6 +48,10 @@ class Quiz extends Component {
           <button className="QuizAlternative" onClick={_ => this.onNextClick()}>
             Exakt!
           </button>
+          <button className="QuizAlternative hidden" />
+          <button className="QuizAlternative hidden" />
+          <button className="QuizAlternative hidden" />
+          <button className="QuizAlternative hidden" />
         </QuestionContainer>
       );
     } else {
