@@ -44,7 +44,9 @@ const daemon = (state = initialState, action) => {
           case 'var-politik':
             return {...state, floskel: state.floskel + 1};
           case 'partiprogram':
-          return {...state, partyProgram: [...state.partyProgram, generateParagraph()] };
+            return {...state, partyProgram: [...state.partyProgram, generateParagraph()] };
+          default:
+            return state;
         }
       case 'PARTYLEADER_LIKE':
         return {...state, 
