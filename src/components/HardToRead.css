@@ -1,0 +1,18 @@
+
+
+.hard-to-read {
+    animation: hard-to-read infinite .5s linear;
+}
+
+
+@keyframes hard-to-read {
+    0% {
+        filter: blur(1px);
+    }
+    50% {
+        filter: blur(1.2px);
+    }
+    100% {
+        filter: blur(1px);
+    }
+}

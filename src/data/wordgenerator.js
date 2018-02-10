@@ -25,24 +25,28 @@ const rows = [
     ["Med hänvisning till", "en inkluderande", "organisation", "tillvaratas", "relationerna", "kring", "konsekvensaspekten"],
 ]
 
-function generateSentence() {
+function generateSentence(keyword) {
     let sentence = "";
     for(let i = 0; i < rows[0].length; i++) {
-        const word = rows[Math.floor(Math.random() * rows.length)][i];
+        let word = '';
+        if (keyword && Math.random() > .9) {
+            word = keyword;
+        } else {
+            word = rows[Math.floor(Math.random() * rows.length)][i];
+        }
         sentence += ' ' + word;
     }
     return sentence;
 }
 
-function generateParagraph() {
+function generateParagraph(keyword) {
     const numSentences = Math.floor(Math.random() * 8) + 1
     let paragraph = "";
     for(let i = 0; i < numSentences; i++) {
-        const sentence = generateSentence();
+        const sentence = generateSentence(keyword);
         paragraph = paragraph + sentence + ". ";
     }
     return paragraph;
-    // return paragraph;
 }
 
 export {

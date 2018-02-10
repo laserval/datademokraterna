@@ -7,6 +7,8 @@ import {generateParagraph} from './data/wordgenerator';
 import Floskel from './components/Floskel.js';
 import LikeThis from './components/LikeThis.js';
 import Opinion from './components/Opinion.js';
+import HardToRead from './components/HardToRead';
+import Search from './components/Search';
 
 class App extends Component {
 
@@ -37,6 +39,7 @@ class App extends Component {
             <h1 className="page-header">data<span className="text-color-alt">democraterna</span></h1>
           </header>
           <nav className="grid-nav">
+            <Search/>
           </nav>
           <aside className="grid-sidebar">
             <LikeThis type="floskel">
