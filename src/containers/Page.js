@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Page.css';
-import Text from '../components/Text.js';
-import Button from '../components/Button.js';
-import LikeThis from '../components/LikeThis.js';
+import Floskel from '../components/Floskel';
+import Text from '../components/Text';
+import Button from '../components/Button';
+import LikeThis from '../components/LikeThis';
+import Input from '../components/Input';
+import Opinion from '../components/Opinion';
+import TextArticle from '../components/TextArticle';
+import ImageArticle from '../components/ImageArticle';
 
 class Page extends Component {
 
   render() {
     return (
         <div className="Page">
-            <header>
-                <h1>Datademokraterna</h1>
+            <header className="grid-header">
+                <Floskel/>
             </header>
-            <nav>
+            <nav className="grid-nav">
                 <Button>
                     Alt1
                 </Button>
@@ -21,13 +26,14 @@ class Page extends Component {
                     Alt2
                 </Button>
             </nav>
-            <aside>
-                <p>hej</p>
+            <aside className="grid-sidebar">
+                <Opinion/>
             </aside>
-            <main>
-                <p>Text här</p>
+            <main className="grid-main">
+                <TextArticle heading="Hej" body="Det var kul"/>
+                <ImageArticle/>
             </main>
-            <footer>
+            <footer className="grid-footer">
                 <p>info om saker</p>
             </footer>
         </div>
