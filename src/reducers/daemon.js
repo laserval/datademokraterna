@@ -1,7 +1,8 @@
 
 const initialState = {
     hellos: 1,
-    headings: 1
+    headings: 1,
+    text: 1
 }
 
 const daemon = (state = initialState, action) => {

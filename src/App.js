@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import Text from './components/Text.js';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
 
   renderHellos() {
-    const { hellos } = this.props;
+    const { text } = this.props;
 
-    return [...Array(hellos)].map((e, i) => <p className="App-intro" onClick={() => this.props.onDrivenClick('hellos')} key={i}>hello</p>);
+    return [...Array(text)].map((e, i) => {
+      return (
+          <Text key={i}>
+            Hello
+          </Text>
+        );
+    });
   }
 
   render() {
@@ -30,14 +37,14 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    hellos: state.hellos,
+    text: state.text,
     headings: state.headings
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onDrivenClick: (element) => dispatch({ type: 'DRIVE', data: { key: element }})
+    onDrive: (element) => () => dispatch({ type: 'DRIVE', data: { key: element }})
   };
 };
 
