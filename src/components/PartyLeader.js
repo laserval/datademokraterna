@@ -9,7 +9,7 @@ class PartyLeader extends Component {
             <div className="PartyLeader-wrapper">
                 <h1>Vår partiledare</h1>
                 <figure className="PartyLeader-figure">
-                    <img src={this.props.leaders.length > 0 ? this.props.leaders[0] : ''}/>
+                    <img alt="Ledaren" src={this.props.leaders.length > 0 ? this.props.leaders[0] : ''}/>
                 </figure>
                 <button className="PartyLeader-like" onClick={this.props.onLike}>
                     <i className="material-icons">thumb_up</i>

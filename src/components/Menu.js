@@ -29,7 +29,7 @@ class Menu extends Component {
             };
             return (
                 <li key={i}>
-                    <a onClick={click} href="#">{e.text}</a>
+                    <a onClick={click} href={`#${e.action}`}>{e.text}</a>
                 </li>
             );
         });

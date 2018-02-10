@@ -25,6 +25,7 @@ import leader17 from '../img/leader/teens-robot-future-science-39349.jpeg';
 
 export const leaders = [
     bamse,
+    wihe,
     coach,
     gandalf,
     jesus,
