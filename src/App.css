@@ -100,6 +100,7 @@ h1, h2, h3, h4 {
 
 .grid main {
   display: flex;
+  flex-basis: 1;
   flex-wrap: wrap;
   padding: 5px;
 }

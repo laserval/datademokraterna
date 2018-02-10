@@ -1,5 +1,6 @@
 import { generateParagraph, generateHeadline } from "../data/wordgenerator";
 import { leaders } from '../data/leaders';
+import { products } from '../data/products';
 
 const initialState = {
     floskel: 0,
@@ -11,7 +12,11 @@ const initialState = {
     },
     quiz: 0,
     hardToRead: false,
-    contactUs: 0
+    contactUs: 0,
+    webshop: {
+      products: [...products].sort(function() { return 0.5 - Math.random() }),
+      boxes: 0
+    }
 }
 
 function modify(key, mod, state) {
@@ -53,6 +58,13 @@ const daemon = (state = initialState, action) => {
                 boxes: state.partyLeader.boxes + 1
               }
             };
+          case 'webshop':
+            return {...state, 
+              webshop: {
+                ...state.webshop,
+                boxes: state.webshop.boxes + 1
+              }
+            };
           case 'kontakta-oss':
             return {...state, contactUs: state.contactUs + 1 };
           case 'svarlast':
@@ -75,9 +87,24 @@ const daemon = (state = initialState, action) => {
               leaders: state.partyLeader.leaders.slice(1)
             }
           };
+      case 'WEBSHOP_LIKE':
+        return {...state, 
+          webshop: {
+            ...state.webshop,
+            boxes: state.webshop.boxes + 1
+          }
+        };
+      case 'WEBSHOP_DISLIKE':
+        return {...state, 
+          webshop: {
+              ...state.webshop,
+              boxes: 1,
+              products: state.webshop.products.slice(1)
+            }
+          };
       default:
         return state
     }
   }
 
-  export default daemon
+  export default daemon;

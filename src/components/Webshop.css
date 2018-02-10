@@ -1,19 +1,19 @@
 
 
-.PartyLeader-wrapper {
+.Webshop-wrapper {
 
 }
 
-.PartyLeader-figure {
+.Webshop-figure {
     max-width: 200px;
     margin: 0 auto;
 }
 
-.PartyLeader-figure img {
+.Webshop-figure img {
     width: 100%;
 }
 
-.PartyLeader-like {
+.Webshop-like {
     font-size: 16px;
     border: solid 2px var(--color-accent);
     color: var(--color-accent);
@@ -22,7 +22,7 @@
     padding: 5px 0;
     width: 70px;
 }
-.PartyLeader-dislike {
+.Webshop-dislike {
     font-size: 16px;
     border: solid 2px var(--color-accent);
     color: var(--color-accent);

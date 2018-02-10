@@ -8,6 +8,7 @@ import Search from './components/Search';
 import logo from './dd_logo.svg';
 import Menu from './components/Menu.js';
 import PartyLeader from './components/PartyLeader.js';
+import Webshop from './components/Webshop';
 import Quiz from './components/Quiz/Quiz';
 
 class App extends Component {
@@ -83,6 +84,18 @@ class App extends Component {
     });
   }
 
+  renderWebshop() {
+    const { webshop } = this.props;
+
+    return [...Array(webshop.boxes)].map((e,i) => {
+      return (
+        <article key={i}>
+          <Webshop/>
+        </article>
+      );
+    });
+  }
+
   render() {
     return (
       <div className={`grid ${this.props.hardToRead ? 'hardToRead' : ''}`}>
@@ -101,6 +114,7 @@ class App extends Component {
             { this.renderFloskler() }
             { this.renderSearched() }
             { this.renderContactUs() }
+            { this.renderWebshop() }
             { this.props.partyProgram.length > 0 &&
               <article>
                 {this.renderPartyProgram()}
@@ -121,7 +135,8 @@ const mapStateToProps = state => {
     partyLeader: state.partyLeader,
     quiz: state.quiz,
     hardToRead: state.hardToRead,
-    contactUs: state.contactUs
+    contactUs: state.contactUs,
+    webshop: state.webshop
   };
 };
 
