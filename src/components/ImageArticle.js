@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LikeThis from './LikeThis';
 import logo from '../logo.svg';
 
-class TextArticle extends Component {
+class ImageArticle extends Component {
     render() {
         return (
             <article>
@@ -17,4 +17,4 @@ class TextArticle extends Component {
     }
 }
 
-export default TextArticle;
+export default ImageArticle;

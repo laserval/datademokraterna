@@ -12,7 +12,7 @@ class Opinion extends Component {
     renderContent() {
         if(this.state.isExpressive === undefined) {
             return (
-                <div class="Opionion__choice">
+                <div className="Opionion__choice">
                     Vill du uttrycka din åsikt?
                     <button onClick={() => { this.setState({isExpressive: true}) }}>Ja!</button>
                     <button onClick={() => { this.setState({isExpressive: false}) }}>Nej!</button>

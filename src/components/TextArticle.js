@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Text from './Text';
+import TextToLookAt from './TextToLookAt';
 
 class TextArticle extends Component {
     render() {
@@ -8,9 +8,9 @@ class TextArticle extends Component {
                 <h1>
                     {this.props.heading}
                 </h1>
-                <Text>
+                <TextToLookAt>
                     {this.props.body}
-                </Text>
+                </TextToLookAt>
             </article>
         );
     }
