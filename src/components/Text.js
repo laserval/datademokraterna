@@ -23,6 +23,10 @@ class Text extends Component {
         );
     }
 }
+
+Text.defaultProps = {
+    type: 'text'
+}
   
 const mapDispatchToProps = dispatch => {
     return {

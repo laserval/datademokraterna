@@ -4,11 +4,15 @@ import { connect } from 'react-redux';
 class Button extends Component {
     render() {
         return (
-            <button className="Button" onClick={() => this.props.onDrive('button')}>
+            <button className="Button" onClick={() => this.props.onDrive(this.props.type)}>
                 { this.props.children }
             </button>
         );
     }
+}
+
+Button.defaultProps = {
+    type: 'button'
 }
   
 const mapDispatchToProps = dispatch => {

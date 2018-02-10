@@ -4,6 +4,7 @@ import Text from './components/Text.js';
 import logo from './logo.svg';
 import './App.css';
 import Button from './components/Button.js';
+import LikeThis from './components/LikeThis.js';
 
 class App extends Component {
 
@@ -13,6 +14,7 @@ class App extends Component {
     return [...Array(hellos)].map((e, i) => {
       return (
           <Text key={i} type="hellos">
+            { this.props.logo > 1 && <img src={logo} className="App-logo" alt="logo" /> }
             Hello
           </Text>
         );
@@ -23,7 +25,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <LikeThis type="logo">
+            <img src={logo} className="App-logo" alt="logo" />
+          </LikeThis>
           <Button>
             Clicky { this.props.button }
           </Button>
@@ -41,7 +45,8 @@ const mapStateToProps = state => {
     hellos: state.hellos,
     text: state.text,
     headings: state.headings,
-    button: state.button
+    button: state.button,
+    logo: state.logo
   };
 };
 
