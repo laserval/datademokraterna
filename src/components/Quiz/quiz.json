@@ -1,0 +1,129 @@
+{
+  "questions": [
+    {
+      "text": "Vad tycker du om höjda skatter?",
+      "image": "https://placeimg.com/640/300/people",
+      "alternatives": [
+        {
+          "text": "Toppenbra!",
+          "right": -1,
+          "gal": 1,
+          "response": "Eller hur! Det är kul att betala skatt!"
+        },
+        {
+          "text": "Det är väl ok",
+          "right": -0.5,
+          "gal": 0.5,
+          "response": "Mmm, det kan vara bra att ha ibland."
+        },
+        {
+          "text": "Vene",
+          "right": 0,
+          "gal": 0,
+          "response": "Håller med, den här frågan var rätt onödig."
+        },
+        {
+          "text": "Alltså, helst inte",
+          "right": 0.5,
+          "gal": -0.5,
+          "response": "Nä, skatter är rätt kasst."
+        },
+        {
+          "text": "Nej, fy fan!",
+          "right": 1,
+          "gal": -1,
+          "response": "Precis! Skatt är mord!"
+        }
+      ]
+    },
+    {
+      "text": "Vad tycker du om miljön?",
+      "image": "https://placeimg.com/640/300/people",
+      "alternatives": [
+        {
+          "text": "Toppenbra!",
+          "right": -1,
+          "gal": 1,
+          "response": "Eller hur! Miljön är superviktig!"
+        },
+        {
+          "text": "Det är väl ok",
+          "right": -0.5,
+          "gal": 0.5,
+          "response": "Mmm, miljö kan vara bra att ha ibland."
+        },
+        {
+          "text": "Vene",
+          "right": 0,
+          "gal": 0,
+          "response": "Håller med, miljöfrågor är rätt ointressant."
+        },
+        {
+          "text": "Alltså, helst inte",
+          "right": 0.5,
+          "gal": -0.5,
+          "response": "Nä, man måste ju få flyga till Thailand ibland."
+        },
+        {
+          "text": "Nej, fy fan!",
+          "right": 1,
+          "gal": -1,
+          "response": "Precis! Miljö är helt onödigt!"
+        }
+      ]
+    },
+    {
+      "text": "Vad tycker du om privatisering?",
+      "image": "https://placeimg.com/640/300/people",
+      "alternatives": [
+        {
+          "text": "Toppenbra!",
+          "right": -1,
+          "gal": 1,
+          "response": "Eller hur! Det är kul att få äga grejer!"
+        },
+        {
+          "text": "Det är väl ok",
+          "right": -0.5,
+          "gal": 0.5,
+          "response": "Mmm, det kan vara bra att ha ibland."
+        },
+        {
+          "text": "Vene",
+          "right": 0,
+          "gal": 0,
+          "response": "Håller med, den här frågan var rätt onödig."
+        },
+        {
+          "text": "Alltså, helst inte",
+          "right": 0.5,
+          "gal": -0.5,
+          "response": "Nä, statligt är ju bättre."
+        },
+        {
+          "text": "Nej, fy fan!",
+          "right": 1,
+          "gal": -1,
+          "response": "Precis! Vinst är mord!"
+        }
+      ]
+    }
+  ],
+  "parties": [
+    { "short": "DD", "name": "Datademokraterna", "right": 0, "gal": 0 },
+    { "short": "V", "name": "Vänsterpartiet", "right": -1, "gal": 0.2 },
+    {
+      "short": "F!",
+      "name": "Feministiskt initiativ",
+      "right": -0.6,
+      "gal": 0.5
+    },
+    { "short": "MP", "name": "Miljöpartiet", "right": -0.25, "gal": 0.9 },
+    { "short": "S", "name": "Socialdemokraterna", "right": -0.25, "gal": -0.1 },
+    { "short": "C", "name": "Centerpartiet", "right": 0.25, "gal": 0.4 },
+    { "short": "L", "name": "Liberalerna", "right": 0.4, "gal": 0.3 },
+    { "short": "KD", "name": "Kristdemokraterna", "right": 0.6, "gal": -0.2 },
+    { "short": "SD", "name": "Sverigedemokraterna", "right": 0.8, "gal": -1 },
+    { "short": "M", "name": "Moderaterna", "right": 1, "gal": -0.1 }
+  ]
+}

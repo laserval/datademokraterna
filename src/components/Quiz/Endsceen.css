@@ -1,0 +1,21 @@
+.ResultList {
+  width: 400px;
+  max-width: 95vw;
+  margin: auto;
+}
+
+.ResultBar {
+  background: rgb(210, 30, 115);
+  color: rgb(255, 216, 163);
+  color: rgb(44, 73, 68);
+  padding: 5px;
+  margin: 5px;
+  text-align: left;
+  position: relative;
+}
+
+.ResultPartyLogo {
+  height: 20px;
+  position: absolute;
+  left: -30px;
+}

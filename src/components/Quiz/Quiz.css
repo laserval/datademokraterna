@@ -1,0 +1,33 @@
+.Quiz {
+}
+
+.QuizHeading {
+}
+
+.QuizQuestionContainer {
+}
+
+.QuizImage {
+}
+
+.QuizLogo {
+  width: 40px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.QuizQuestion,
+.QuizResponse {
+  font-size: 20px;
+}
+
+.QuizAlternative {
+  display: block;
+  border: 1px solid rgb(185, 28, 101);
+  background: rgb(210, 30, 115);
+  color: rgb(255, 216, 163);
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  margin: 12px auto;
+}
