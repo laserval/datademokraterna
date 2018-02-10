@@ -10,7 +10,8 @@ const initialState = {
       boxes: 0
     },
     quiz: 0,
-    hardToRead: false
+    hardToRead: false,
+    contactUs: 0
 }
 
 function modify(key, mod, state) {
@@ -45,6 +46,15 @@ const daemon = (state = initialState, action) => {
             return {...state, partyProgram: [...state.partyProgram, generateParagraph()] };
           case 'valkompisen':
             return {...state, quiz: state.quiz + 1 };
+          case 'var-partiledare':
+            return {...state, 
+              partyLeader: {
+                ...state.partyLeader,
+                boxes: state.partyLeader.boxes + 1
+              }
+            };
+          case 'kontakta-oss':
+            return {...state, contactUs: state.contactUs + 1 };
           case 'svarlast':
             return {...state, hardToRead: true };
           default:

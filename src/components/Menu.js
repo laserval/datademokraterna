@@ -44,7 +44,7 @@ class Menu extends Component {
             { text: "Valkompisen", action: 'valkompisen' },
             { text: "Svårläst", action: 'svarlast' },
             { text: "Webshop", action: 'webshop' },
-            { text: "Kontakta oss", action: 'kontakt-oss'}
+            { text: "Kontakta oss", action: 'kontakta-oss'}
         ];
         if (this.state.active) {
             return (

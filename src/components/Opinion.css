@@ -1,0 +1,17 @@
+
+
+.Opinion-button {
+    font-size: 16px;
+    border: solid 2px var(--color-accent);
+    color: var(--color-accent);
+    margin: 10px;
+    padding: 5px 0;
+    width: 70px;
+}
+
+.Opinion-wrapper form textarea {
+	width: 300px;
+	height: 120px;
+    border: solid 3px var(--color-accent);
+    outline: none;
+}

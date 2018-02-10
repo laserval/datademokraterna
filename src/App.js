@@ -73,9 +73,21 @@ class App extends Component {
     });
   }
 
+  renderContactUs() {
+    const { contactUs } = this.props;
+
+    return [...Array(contactUs)].map((e,i) => {
+      return (
+        <article key={i}>
+          <Opinion/>
+        </article>
+      );
+    });
+  }
+
   render() {
     return (
-      <div className="grid">
+      <div className={`grid ${this.props.hardToRead ? 'hardToRead' : ''}`}>
           <header className="grid-header">
             <Menu className="header-menu"/>
             <figure className="header-logo">
@@ -90,6 +102,7 @@ class App extends Component {
             { this.renderQuizes() }
             { this.renderFloskler() }
             { this.renderSearched() }
+            { this.renderContactUs() }
             { this.props.partyProgram.length > 0 &&
               <article>
                 {this.renderPartyProgram()}
@@ -108,7 +121,9 @@ const mapStateToProps = state => {
     partyProgram: state.partyProgram,
     search: state.search,
     partyLeader: state.partyLeader,
-    quiz: state.quiz
+    quiz: state.quiz,
+    hardToRead: state.hardToRead,
+    contactUs: state.contactUs
   };
 };
 

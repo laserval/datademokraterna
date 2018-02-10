@@ -35,7 +35,9 @@ class Input extends Component {
 
     render() {
         return (
-            <textarea type="text" className="Input" onKeyDown={this.onKeyDown} onKeyUp={this.handleOnKeyUp} onChange={this.handleChange} value={this.state.value} />
+            <textarea type="text" className="Input" 
+            onKeyDown={this.onKeyDown} onKeyUp={this.handleOnKeyUp} onChange={this.handleChange} 
+            value={this.state.value} />
         );
     }
 }
