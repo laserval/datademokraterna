@@ -10,6 +10,7 @@ import Search from './components/Search';
 import logo from './dd_logo.svg';
 import Menu from './components/Menu.js';
 import PartyLeader from './components/PartyLeader.js';
+import Quiz from './components/Quiz/Quiz';
 
 class App extends Component {
 
@@ -62,6 +63,16 @@ class App extends Component {
     });
   }
 
+  renderQuizes() {
+    const { quiz } = this.props;
+
+    return [...Array(quiz)].map((e,i) => {
+      return (
+        <Quiz key={i}/>
+      );
+    });
+  }
+
   render() {
     return (
       <div className="grid">
@@ -76,6 +87,7 @@ class App extends Component {
           </nav>
           <main className="grid-main">
             { this.renderPartyLeaders() }
+            { this.renderQuizes() }
             { this.renderFloskler() }
             { this.renderSearched() }
             { this.props.partyProgram.length > 0 &&
@@ -95,7 +107,8 @@ const mapStateToProps = state => {
     floskel: state.floskel,
     partyProgram: state.partyProgram,
     search: state.search,
-    partyLeader: state.partyLeader
+    partyLeader: state.partyLeader,
+    quiz: state.quiz
   };
 };
 

@@ -2,17 +2,15 @@ import { generateParagraph, generateHeadline } from "../data/wordgenerator";
 import { leaders } from '../data/leaders';
 
 const initialState = {
-    hellos: 1,
-    headings: 1,
-    text: 1,
-    button: 1,
     floskel: 0,
     partyProgram: [],
     search: [],
     partyLeader: {
       leaders: [...leaders].sort(function() { return 0.5 - Math.random() }),
       boxes: 0
-    }
+    },
+    quiz: 0,
+    hardToRead: false
 }
 
 function modify(key, mod, state) {
@@ -45,6 +43,10 @@ const daemon = (state = initialState, action) => {
             return {...state, floskel: state.floskel + 1};
           case 'partiprogram':
             return {...state, partyProgram: [...state.partyProgram, generateParagraph()] };
+          case 'valkompisen':
+            return {...state, quiz: state.quiz + 1 };
+          case 'svarlast':
+            return {...state, hardToRead: true };
           default:
             return state;
         }

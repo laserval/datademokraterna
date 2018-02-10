@@ -115,3 +115,7 @@ h1, h2, h3, h4 {
 .grid footer {
   background-color: var(--color-dark);
 }
+
+.hardToRead p,h1,a {
+  
+}
