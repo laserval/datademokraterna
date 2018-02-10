@@ -28,10 +28,10 @@
 }
 
 @keyframes App-blur {
-  from { 
-    filter: blur(0); 
+  from {
+    filter: blur(0);
   }
-  to { 
-    filter: blur(10px); 
+  to {
+    filter: blur(10px);
   }
 }

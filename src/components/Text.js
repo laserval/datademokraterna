@@ -4,18 +4,21 @@ import Waypoint from 'react-waypoint';
 
 class Text extends Component {
 
-    startViewing = () => {
-        clearInterval(this.id);
-        this.id = setInterval(() => this.props.onDrive(this.props.type), 1000);
+    constructor() {
+        super();
+        this.didSpawn = false;
     }
 
-    stopViewing = () => {
-        clearInterval(this.id);
+    handleScrolledIntoViewport = () => {
+        if (!this.didSpawn) {
+            this.props.onDrive(this.props.type);
+            this.didSpawn = true;
+        }
     }
 
     render() {
         return (
-            <Waypoint onEnter={this.startViewing} onLeave={this.stopViewing}>
+            <Waypoint onEnter={() => this.handleScrolledIntoViewport()}>
                 <p className="Text">
                     { this.props.children }
                 </p>
@@ -27,7 +30,7 @@ class Text extends Component {
 Text.defaultProps = {
     type: 'text'
 }
-  
+
 const mapDispatchToProps = dispatch => {
     return {
         onDrive: (element) => dispatch({ type: 'DRIVE', data: { key: element }})
@@ -39,4 +42,3 @@ export default connect(
     undefined,
     mapDispatchToProps
 )(Text);
-  
