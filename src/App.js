@@ -9,6 +9,7 @@ import HardToRead from './components/HardToRead';
 import Search from './components/Search';
 import logo from './dd_logo.svg';
 import Menu from './components/Menu.js';
+import PartyLeader from './components/PartyLeader.js';
 
 class App extends Component {
 
@@ -49,6 +50,18 @@ class App extends Component {
     });
   }
 
+  renderPartyLeaders() {
+    const { partyLeader } = this.props;
+
+    return [...Array(partyLeader.boxes)].map((e,i) => {
+      return (
+        <article key={i}>
+          <PartyLeader/>
+        </article>
+      );
+    });
+  }
+
   render() {
     return (
       <div className="grid">
@@ -62,6 +75,7 @@ class App extends Component {
           <nav className="grid-nav">
           </nav>
           <main className="grid-main">
+            { this.renderPartyLeaders() }
             { this.renderFloskler() }
             { this.renderSearched() }
             { this.props.partyProgram.length > 0 &&
@@ -78,13 +92,10 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    hellos: state.hellos,
-    text: state.text,
-    headings: state.headings,
-    button: state.button,
     floskel: state.floskel,
     partyProgram: state.partyProgram,
-    search: state.search
+    search: state.search,
+    partyLeader: state.partyLeader
   };
 };
 

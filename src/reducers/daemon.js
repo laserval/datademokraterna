@@ -1,4 +1,5 @@
 import { generateParagraph, generateHeadline } from "../data/wordgenerator";
+import { leaders } from '../data/leaders';
 
 const initialState = {
     hellos: 1,
@@ -7,7 +8,11 @@ const initialState = {
     button: 1,
     floskel: 0,
     partyProgram: [],
-    search: []
+    search: [],
+    partyLeader: {
+      leaders: [...leaders].sort(function() { return 0.5 - Math.random() }),
+      boxes: 0
+    }
 }
 
 function modify(key, mod, state) {
@@ -41,6 +46,21 @@ const daemon = (state = initialState, action) => {
           case 'partiprogram':
           return {...state, partyProgram: [...state.partyProgram, generateParagraph()] };
         }
+      case 'PARTYLEADER_LIKE':
+        return {...state, 
+          partyLeader: {
+            ...state.partyLeader,
+            boxes: state.partyLeader.boxes + 1
+          }
+        };
+      case 'PARTYLEADER_DISLIKE':
+        return {...state, 
+            partyLeader: {
+              ...state.partyLeader,
+              boxes: 1,
+              leaders: state.partyLeader.leaders.slice(1)
+            }
+          };
       default:
         return state
     }
