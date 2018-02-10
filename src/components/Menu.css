@@ -1,0 +1,26 @@
+
+.Menu-wrapper {
+}
+
+.Menu-link {
+    margin: 10px;
+}
+
+.Menu-icon {
+    color: var(--color-light);
+}
+
+.Menu-wrapper ol {
+    list-style: none;
+    padding: 26px;
+    background-color: var(--color-accent);
+}
+
+.Menu-wrapper li {
+    color: var(--color-light);
+}
+
+.Menu-wrapper li a {
+    color: var(--color-light);
+    text-decoration: none;
+}

@@ -5,8 +5,8 @@ const initialState = {
     headings: 1,
     text: 1,
     button: 1,
-    floskel: 1,
-    partyProgram: [generateParagraph()],
+    floskel: 0,
+    partyProgram: [],
     search: []
 }
 
@@ -34,6 +34,13 @@ const daemon = (state = initialState, action) => {
         }
       case 'LESS':
         return modify(action.data.key, (a) => a-1, state);
+      case 'MENU':
+        switch (action.data) {
+          case 'var-politik':
+            return {...state, floskel: state.floskel + 1};
+          case 'partiprogram':
+          return {...state, partyProgram: [...state.partyProgram, generateParagraph()] };
+        }
       default:
         return state
     }

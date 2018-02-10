@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-div {
+div, article, header, footer, aside {
   margin: 0;
   padding: 0;
 }
@@ -35,14 +36,21 @@ h1, h2, h3, h4 {
 .header-logo {
   max-width: 300px;
   margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .header-search {
 
   position: absolute;
   right: 0;
+  top: 0;
+}
+
+.header-menu {
+
+  position: absolute;
+  left: 0;
   top: 0;
 }
 
@@ -93,6 +101,7 @@ h1, h2, h3, h4 {
 .grid main {
   display: flex;
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .grid-main article {
@@ -100,7 +109,7 @@ h1, h2, h3, h4 {
   border: solid 5px var(--color-dark);
   background-color: var(--color-white);
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
 }
 
 .grid footer {

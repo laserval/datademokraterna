@@ -35,14 +35,14 @@ class Search extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <input className="Search-input" type="search" placeholder="Sök och finn" 
                         value={this.state.value} onChange={this.handleChange}/>
-                        <input className="Search-submit" type="submit" value="Sök"/>
+                        <button className="Search-button" onClick={this.onClick}><i className="material-icons Search-icon">search</i></button>
                     </form>
                 </div>
             );
         } else {
             return (
                 <div className={`Search-wrapper ${this.props.className}`}>
-                    <button onClick={this.onClick}>Sök</button>
+                    <button className="Search-button" onClick={this.onClick}><i className="material-icons Search-icon">search</i></button>
                 </div>
             )
         }

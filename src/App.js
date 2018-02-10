@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Text from './components/Text.js';
 import './App.css';
-import {generateParagraph,generateHeadline} from './data/wordgenerator';
 import Floskel from './components/Floskel.js';
 import LikeThis from './components/LikeThis.js';
 import Opinion from './components/Opinion.js';
 import HardToRead from './components/HardToRead';
 import Search from './components/Search';
 import logo from './dd_logo.svg';
+import Menu from './components/Menu.js';
 
 class App extends Component {
 
@@ -41,7 +41,11 @@ class App extends Component {
     const { floskel } = this.props;
 
     return [...Array(floskel)].map((e,i) => {
-      return (<Floskel key={i}/>);
+      return (
+        <article key={i}>
+          <Floskel/>
+        </article>
+      );
     });
   }
 
@@ -49,6 +53,7 @@ class App extends Component {
     return (
       <div className="grid">
           <header className="grid-header">
+            <Menu className="header-menu"/>
             <figure className="header-logo">
               <img src={logo} alt="datademokraterna"/>
             </figure>
@@ -57,8 +62,12 @@ class App extends Component {
           <nav className="grid-nav">
           </nav>
           <main className="grid-main">
-            
+            { this.renderFloskler() }
             { this.renderSearched() }
+            { this.props.partyProgram.length > 0 &&
+              <article>
+                {this.renderPartyProgram()}
+              </article> }
           </main>
       </div>
     );
