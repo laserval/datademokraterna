@@ -56,17 +56,8 @@ class App extends Component {
           </header>
           <nav className="grid-nav">
           </nav>
-          <aside className="grid-sidebar">
-            <LikeThis type="floskel">
-              <Floskel/>
-            </LikeThis>
-            <Opinion/>
-          </aside>
           <main className="grid-main">
-            <article>
-              <h1>Vårt partiprogram</h1>
-              { this.renderPartyProgram() }
-            </article>
+            
             { this.renderSearched() }
           </main>
       </div>

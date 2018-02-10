@@ -9,6 +9,7 @@ div {
   --color-dark: rgb(44, 73, 68);
   --color-light: rgb(255, 216, 163);
   --color-accent: rgb(210, 30, 115);
+  --color-white: rgb(255, 255, 255);
 }
 
 body {
@@ -54,7 +55,7 @@ h1, h2, h3, h4 {
   grid-template-areas:
     "header header header header"
     "nav nav nav nav"
-    "sidebar main main ."
+    "main main main main"
     "footer footer footer footer";
 }
 
@@ -91,10 +92,15 @@ h1, h2, h3, h4 {
 
 .grid main {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.grid main article {
+.grid-main article {
   flex: 1;
+  border: solid 5px var(--color-dark);
+  background-color: var(--color-white);
+  padding: 10px;
+  margin: 5px;
 }
 
 .grid footer {
