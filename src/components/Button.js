@@ -14,7 +14,7 @@ class Button extends Component {
 Button.defaultProps = {
     type: 'button'
 }
-  
+
 const mapDispatchToProps = dispatch => {
     return {
         onDrive: (element) => dispatch({ type: 'DRIVE', data: { key: element }})
@@ -26,4 +26,3 @@ export default connect(
     undefined,
     mapDispatchToProps
 )(Button);
-  

@@ -29,7 +29,7 @@ class LikeThis extends Component {
                     </button>
                 </div>
                 }
-                
+
             </React.Fragment>
         );
     }
@@ -38,7 +38,7 @@ class LikeThis extends Component {
 LikeThis.defaultProps = {
     type: 'likethis'
 }
-  
+
 const mapDispatchToProps = dispatch => {
     return {
         onDrive: (element) => dispatch({ type: 'DRIVE', data: { key: element }}),
@@ -51,4 +51,3 @@ export default connect(
     undefined,
     mapDispatchToProps
 )(LikeThis);
-  
