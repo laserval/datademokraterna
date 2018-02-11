@@ -2,7 +2,7 @@
   "questions": [
     {
       "text": "Vad tycker du om höjda skatter?",
-      "image": "https://placeimg.com/640/300/people?0",
+      "image": "https://placeimg.com/640/300/people",
       "alternatives": [
         {
           "text": "Toppenbra!",
@@ -38,7 +38,7 @@
     },
     {
       "text": "Vad tycker du om miljön?",
-      "image": "https://placeimg.com/640/300/nature?1",
+      "image": "https://placeimg.com/640/300/nature",
       "alternatives": [
         {
           "text": "Älskar den!",
@@ -74,7 +74,7 @@
     },
     {
       "text": "Vad tycker du om privatisering?",
-      "image": "https://placeimg.com/640/300/arch?2",
+      "image": "https://placeimg.com/640/300/arch",
       "alternatives": [
         {
           "text": "Privatisera mera!",
